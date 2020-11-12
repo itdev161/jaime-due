@@ -49,7 +49,7 @@ class App extends React.Component {
         .catch((error) => {
           localStorage.remove('user');
           this.setState({ user: null });
-          console.error('Error logging in: ${error}');
+          console.error(`Error logging in: ${error}`);
         })
     }
   }
