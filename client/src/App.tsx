@@ -47,7 +47,7 @@ class App extends React.Component {
           this.setState({ user: response.data.name })
         })
         .catch((error) => {
-          localStorage.remove('user');
+          localStorage.removeItem('user');
           this.setState({ user: null });
           console.error(`Error logging in: ${error}`);
         })
