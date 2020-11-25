@@ -62,13 +62,13 @@ class App extends React.Component {
         }
       };
       axios
-        .get('http://localhost:5000')
-        .then((response) => {
+        .get('http://localhost:5000/api/posts', config)
+        .then(response => {
           this.setState({
-            data: response.data
-          })
+            posts: response.data
+          });
         })
-        .catch((error) => {
+        .catch(error => {
           console.error(`Error fetching data: ${error}`);
         });
     }
@@ -117,7 +117,7 @@ class App extends React.Component {
                       <div key={post._id}>
                         <h1>{post.title}</h1>
                         <p>{post.body}</p>
-                        </div>
+                      </div>
                     ))}
                   </div>
                 </React.Fragment> 
