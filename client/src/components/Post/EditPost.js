@@ -32,7 +32,7 @@ const EditPost = ({ token, post, onPostUpdated }) => {
             try {
                 const config = {
                     headers: {
-                        'Contite-Type': 'application/json',
+                        'Content-Type': 'application/json',
                         'x-auth-token': token
                     }
                 };

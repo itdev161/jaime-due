@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import './styles.css';
-import { title } from 'process';
 
 const CreatePost = ({ token, onPostCreated }) => {
     let history = useHistory();
@@ -33,7 +32,7 @@ const CreatePost = ({ token, onPostCreated }) => {
             try {
                 const config = {
                     headers: {
-                        'Contite-Type': 'application/json',
+                        'Content-Type': 'application/json',
                         'x-auth-token': token
                     }
                 };
