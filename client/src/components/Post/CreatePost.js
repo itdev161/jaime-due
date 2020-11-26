@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import './styles.css';
 import { title } from 'process';
 
-const CreatePost = ({ onPostCreated }) => {
+const CreatePost = ({ token, onPostCreated }) => {
     let history = useHistory();
     const [postData, setPostData] = useState({
         title: '',
